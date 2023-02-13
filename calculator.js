@@ -20,7 +20,7 @@ app.get('/adding_numbers', (req, res) => {  //getting API for addition
 
   res.send({ result:sum });
 
-});
+})
 
 
 app.get('/multiplying_numbers', (req, res) => { //getting API for multiplication
