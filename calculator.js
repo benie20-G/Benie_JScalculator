@@ -6,11 +6,11 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
 
 
-app.get('/adding_numbers', (req, res) => {
+app.get('/adding_numbers', (req, res) => {  //getting API for addition
 
  res.statusCode(200)
 
-  const numbers_array = req.body.numbers;
+  const numbers_array = req.body.numbers;//taking the array of numbers to be added
 
   let sum = 0;
 
@@ -23,11 +23,11 @@ app.get('/adding_numbers', (req, res) => {
 });
 
 
-app.get('/multiplying_numbers', (req, res) => {
+app.get('/multiplying_numbers', (req, res) => { //getting API for multiplication
 
     res.statusCode(200)
 
-  const numbers_array = req.body.numbers;
+  const numbers_array = req.body.numbers;//taking te array of numbers to be mutiplied
 
   let product = 1;
   for ( i = 0; i < numbers_array.length; i++) {
@@ -40,4 +40,4 @@ app.get('/multiplying_numbers', (req, res) => {
 
 
 const port = 3000;
-app.listen(port, () => console.log(`application is running on the port ${port}...`));
+app.listen(port, () => console.log(`application is running on the port ${port}`));
